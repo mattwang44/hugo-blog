@@ -21,7 +21,7 @@ categories: ["Tech"]
 
 # Enable MathJax
 
-Add following lines into `theme/<theme>/layout/partials/head.html` or any template that the target page used:
+Add following lines into `theme/<theme>/layout/partials/math.html`
 
 ```html
 <script
@@ -33,3 +33,13 @@ Add following lines into `theme/<theme>/layout/partials/head.html` or any templa
   MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$']]}  });
 </script>
 ```
+
+and put following lines in any template that the target page used:
+
+```
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+```
+
+and then put the parameter `math: true` on the target page to enable MathJax.
