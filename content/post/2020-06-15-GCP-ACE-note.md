@@ -1,68 +1,24 @@
 ---
-title: "Preparation of GCP certificated associate cloud engineer [WIP]"
-subtitle: ""
+title: "Course Note: Cloud Engineering with GCP on Coursera"
+subtitle: "Course note for the preparation of GCP ACE Certificate"
 description: " "
 excerpt: " "
 date: 2020-06-15
 author: "Matt Wang"
-image: "https://dome9.com/wp-content/uploads/2018/12/gcp-banner.jpg"
+image: "https://images.unsplash.com/photo-1523815085589-2ed388376202?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80"
 published: true
+math: true
 tags:
   - GCP
-URL: "/2020/06/15/GCP-ACE/"
+  - Coursera
+URL: "/2020/06/15/gcp-ace-note/"
 categories: ["Tech"]
 ---
 
-# Useful Links
+This is the note of the course [Cloud Engineering with GCP](https://www.coursera.org/professional-certificates/cloud-engineering-gcp).
+Go to [this article](/2020/07/01/gcp-ace/) to see how I prepared for GCP ACE exam.
 
-## About ACE Certification
-
-- [Exam Overview](https://cloud.google.com/certification/cloud-engineer)
-- [Official Exam Guide](https://cloud.google.com/certification/guides/cloud-engineer)
-- [Google Cloud Training](https://cloud.google.com/training)
-
-## Online Courses
-
-|                                                                     Name                                                                     |      Platform       |       Price       | Mock Exam |                                              |
-| :------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------: | :---------------: | :-------: | :------------------------------------------: |
-|   [Cloud Engineering with Google Cloud Professional Certificate](https://www.coursera.org/professional-certificates/cloud-engineering-gcp)   |      Coursera       |    \$50/month     |     N     |                 Recommended                  |
-|     [Google Cloud Certified Associate Cloud Engineer](https://linuxacademy.com/course/google-cloud-certified-associate-cloud-engineer/)      |    LinuxAcademy     |       \$50        |  Y (50Q)  |
-| [Ultimate Google Certified Associate Cloud Engineer 2020](https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/) |     GCP @Udemy      |       ~\$60       |  Y (70Q)  |            Mostly on sale (<\$15)            |
-|      [Google Certified Associate Cloud Engineer Certification](https://www.udemy.com/course/google-certified-associate-cloud-engineer/)      | A Cloud Guru @Udemy |      ~\$230       | Y (100Q)  |            Mostly on sale (<\$20)            |
-|                                            [Hand-on Labs@Qwiklabs](https://google.qwiklabs.com/)                                             |      Qwiklabs       | Charged by credit |     N     | Free credits are available from time to time |
-
-## Practice Exams
-
-|                                                      Platform                                                      | Price | # of Questions |                                            |
-| :----------------------------------------------------------------------------------------------------------------: | :---: | :------------: | :----------------------------------------: |
-|           [Official Practice Exam](https://cloud.google.com/certification/practice-exam/cloud-engineer)            | Free  |       25       | Too easy but make sure to run through this |
-|               [Whizlabs](https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/)                | \$20  |      150       |                                            |
-| [BrainCert](https://www.braincert.com/course/16818-Google-Cloud-Certified-Associate-Cloud-Engineer-Practice-Exams) | \$30  |      250       |                                            |
-
-## People
-
-- Joseph Holbrook (The Cloud Tech Guy): [medium](https://medium.com/@jholbrook2015), [YouTube](https://www.youtube.com/channel/UCLcRBsiL_BIgDdn7P6uZbnQ), [Udemy](https://www.udemy.com/user/joseph-holbrook/)
-
-## Repos
-
-- [sathishvj/awesome-gcp-certifications](https://github.com/sathishvj/awesome-gcp-certifications/blob/master/associate-cloud-engineer.md)
-- [ddneves/awesome-gcp-certifications (outdated)](https://github.com/ddneves/awesome-gcp-certifications#Google-Cloud---Associate-Cloud-Engineer)
-
-## Cheatsheets
-
-- [Whizlabs](https://www.whizlabs.com/blog/gcp-cheat-sheet/)
-- [Viniciuscoding/granja_Google_Associate_Cloud_Engineer](https://github.com/Viniciuscoding/granja_Google_Associate_Cloud_Engineer)
-- [WebLeash/gcp_associate_engineer](https://github.com/WebLeash/gcp_associate_engineer/blob/master/gcloud_cheat_sheet.md)
-- [TiagoGouvea/google-cloud-associate-cloud-engineer-preparation](https://github.com/TiagoGouvea/google-cloud-associate-cloud-engineer-preparation)
-- [DRpandaMD/gcp-certified-associate-cloud-engineer-2020](https://github.com/DRpandaMD/gcp-certified-associate-cloud-engineer-2020)
-- [Shekhar Sarker: Notes from my Google Cloud Certification Exam](https://medium.com/@shekharsarker84/notes-from-my-google-cloud-certification-exam-9ac056105121)
-- [Charles.J@medium](https://medium.com/@charles_j/how-i-passed-the-google-cloud-associate-engineer-certification-63a0fd932057): [ACE Study Note](https://docs.google.com/document/d/1u6pXBiGMYj7ZLBN21x6jap11rG6gWk7n210hNnUzrkI/edit)
-
-## YouTube
-
-- [sathishvj: AwesomeGCP](https://www.youtube.com/playlist?list=PLQMsfKRZZviRwqJwNmh1eAWnRMvlrk40x)
-
-# Notes
+## Mind Map
 
 {{% mind %}}
 
@@ -286,8 +242,10 @@ gcloud config set project <project id>
 - ```shell
   # migrate the service to new version
   gcloud app versions migrate v2 --service="s1"
+
   # split traffic evenly between 'v1' and 'v2' of service 's1', run:
   gcloud app services set-traffic s1 --splits v2=.5,v1=.5
+
   # deploy but send no traffic
   gcloud app deploy --no-promote
   ```
@@ -295,7 +253,6 @@ gcloud config set project <project id>
 ### Compute Engine (GCE)
 
 - [Docs](https://cloud.google.com/compute/docs/)
-- Iaas
 - Features
   - choose vCPUs & memory
   - Networking
@@ -308,7 +265,7 @@ gcloud config set project <project id>
       ```shell
       curl metadata.google.internal/computeMetadata/v1/
       ```
-  - OS images - [Docs](https://cloud.google.com/compute/docs/images)
+  - OS images ([doc](https://cloud.google.com/compute/docs/images))
     - Choose between
       - public base images
       - custom images
@@ -321,7 +278,7 @@ gcloud config set project <project id>
       |                |                   |                  |                  |                   |   new platform    | for small intensive app |
     - (`N` indicates # of vCPUs)
   - custom
-    - number of vCPU = 2^n (n = 0, 1, 2,...)
+    - number of vCPU = $2^n$ ($n = 0, 1, 2,...$)
     - memory must in (0.9, 6.5) GB per vCPU
     - total memory must be multiple of 256MB
     - extend memory -> provide higher memory/vCPU ratio with additional cost
@@ -330,7 +287,7 @@ gcloud config set project <project id>
     - **HDD** (standard) & **SSD**
     - resize while running
     - encryption keys
-    - snapshot for backup - [Docs - Create Snapshot](https://cloud.google.com/compute/docs/disks/create-snapshots)
+    - snapshot for backup ([doc](https://cloud.google.com/compute/docs/disks/create-snapshots))
   - **local SSD**: up to 8disk x 375GB (3TB in total)
   - |                    |           HDD            |     SSD     |       local SSD        |            RAM Disk             |
     | :----------------: | :----------------------: | :---------: | :--------------------: | :-----------------------------: |
@@ -353,6 +310,7 @@ gcloud config set project <project id>
 ```shell
 # create an instance
 gcloud compute instances create --machine-type=<machine-type> <instance_name>
+
 # move an instance to another zone within same region
 gcloud compute instances move <instance_name>
 ```
@@ -420,16 +378,19 @@ kubectl autoscale <service> --min=10 --max=15 --cpu=80
     some_program | gsutil -m cp -I gs://my-bucket
     ```
 - ACL (Access Control Lists)
+
   - e.g.
     - e-mail
-    - allUsers
-    - allAuthenticatedUsers
+    - `allUsers`
+    - `allAuthenticatedUsers`
   - ```shell
     # set ACL
     gsutil acl set private gs://bucket
+
     # Change ACL for all users to have read access (O for owner, W for write, R for read)
     gsutil acl ch -u AllUsers:R gs://example-bucket/example-object
     ```
+
 - signed URL
   ```shell
   # duration = 10 minutes
@@ -446,8 +407,8 @@ kubectl autoscale <service> --min=10 --max=15 --cpu=80
 | :--------------: | :------------------------: | :---------------------------------------: | :-----------------------------: | :----------------------------: |
 |   Data that is   |     Frequently access      |      Freqenctly access within region      | Access less than once per month | Access less than once per year |
 |       SLA        |           99.95%           |                  99.90%                   |               99%               |              99%               |
-|  Storage Price   |          \$\$\$\$          |                  \$\$\$                   |              \$\$               |               \$               |
-| Retrieval Price  |             \$             |                    \$                     |              \$\$               |             \$\$\$             |
+|  Storage Price   |   $\star\star\star\star$   |             $\star\star\star$             |          $\star\star$           |            $\star$             |
+| Retrieval Price  |          $\star$           |                  $\star$                  |        $\star\star\star$        |       $\star\star\star$        |
 |    Use cases     | Content storage & delivery | In-region analytics, GCE/GKE-related data |    Long-tail content, backup    |  Archiving, disaster recovery  |
 | minimum duration |             -              |                     -                     |             30 days             |            90 days             |
 
@@ -539,7 +500,7 @@ kubectl autoscale <service> --min=10 --max=15 --cpu=80
 - Auto replication
   - Vertical scaling (machine type)
   - (weak) Horizontal scaling (# of instaces)
-- `gcloud sql`
+- [`gcloud sql`](https://cloud.google.com/sdk/gcloud/reference/sql)
 
 ### Cloud Firestore
 
