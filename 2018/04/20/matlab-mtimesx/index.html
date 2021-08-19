@@ -1,0 +1,304 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta property="og:site_name" content="WHW blog">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://mattwang44.github.io//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
+<meta property="twitter:image" content="https://mattwang44.github.io//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
+<meta name=title content="MTIMESX: MATLAB快速多維矩陣乘積">
+<meta property="og:title" content="MTIMESX: MATLAB快速多維矩陣乘積">
+<meta property="twitter:title" content="MTIMESX: MATLAB快速多維矩陣乘積">
+<meta name=description content="MTIMESX: reduce the execution time enumerously for multi-dimension array multiplication with MATLAB">
+<meta property="og:description" content="MTIMESX: reduce the execution time enumerously for multi-dimension array multiplication with MATLAB">
+<meta property="twitter:description" content="MTIMESX: reduce the execution time enumerously for multi-dimension array multiplication with MATLAB">
+<meta property="twitter:card" content="summary">
+<meta name=keyword content="MattWang, blog, Taiwan">
+<link rel="shortcut icon" href=/img/favicon.ico>
+<title>MTIMESX: MATLAB快速多維矩陣乘積-MattWang Blog</title>
+<link rel=canonical href=/2018/04/20/matlab-mtimesx/>
+<link rel=stylesheet href=/css/iDisqus.min.css>
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/hux-blog.min.css>
+<link rel=stylesheet href=/css/zanshang.css>
+<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet type=text/css>
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/hux-blog.min.js></script>
+</head>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<div class=container-fluid>
+<div class="navbar-header page-scroll">
+<button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=/>WHW blog</a>
+</div>
+<div id=huxblog_navbar>
+<div class=navbar-collapse>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href=/>Home</a>
+</li>
+<li>
+<a href=/categories/tech>tech</a>
+</li>
+<li><a href=/top/about/>ABOUT</a></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script>
+<style type=text/css>header.intro-header{background-image:url(https://opendatascience.com/wp-content/uploads/2019/04/banner2-750x350.jpg)}</style>
+<header class=intro-header>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class=post-heading>
+<div class=tags>
+<a class=tag href=/tags/matlab title=MATLAB>
+MATLAB
+</a>
+</div>
+<h1>MTIMESX: MATLAB快速多維矩陣乘積</h1>
+<h2 class=subheading></h2>
+<span class=meta>
+Posted by
+Matt Wang
+on
+Friday, April 20, 2018
+</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class=container>
+<div class=row>
+<div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+post-container">
+<header>
+<h2>Content</h2>
+</header>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#安裝步驟><strong>安裝步驟</strong></a></li>
+<li><a href=#使用方法與範例><strong>使用方法與範例</strong></a></li>
+<li><a href=#實際測試><strong>實際測試</strong></a></li>
+</ul>
+</nav>
+<p>在多維矩陣運算當中，雖然用多個 for-loops 處理較為直觀易懂，但其實非常耗時。在我修習台大醫工所的<a href=https://github.com/mattwang44/Human-Motion-Analysis-MATLAB target=_blank>人體動做分析電腦計算方法</a>
+時，發現了 MATLAB 有<a href=https://www.mathworks.com/matlabcentral/fileexchange/25977-mtimesx-fast-matrix-multiply-with-multi-dimensional-support target=_blank>MTIMESX</a>
+這個多維矩陣乘積函式，底層為 C 語言，大幅減低了運算時間。</p>
+<h1 id=安裝步驟><strong>安裝步驟</strong></h1>
+<p>工具包作者已經寫好安裝執行檔，只需要做幾個設定便能開始自動安裝。以下是在 MATLAB2017b 版本上的範例安裝過程。</p>
+<ol>
+<li>
+<p>首先，先從<a href=https://www.mathworks.com/matlabcentral/fileexchange/25977-mtimesx-fast-matrix-multiply-with-multi-dimensional-support target=_blank>MTIMESX 之 Mathworks 頁面</a>
+上將其下載、解壓縮，並將資料夾改名為<code>mtimesx</code>:
+<img src=/img/posts/MATLAB/MTIMESX/0.png alt></p>
+</li>
+<li>
+<p>將<code>mtimesx_build.m</code>檔案中第 166 行改成 <code>mexopts = [prefdir '\mex_C_win64.xml'];</code>:
+<img src=/img/posts/MATLAB/MTIMESX/1.png alt></p>
+</li>
+<li>
+<p>將 <code>mtimesx</code>資料夾移動到 MATLAB 安裝位置中的 toolbox 資料夾，它的位置大概會像是 <code>C:\Program Files\MATLAB\R2017b\toolbox</code>:
+<img src=/img/posts/MATLAB/MTIMESX/2.png alt></p>
+</li>
+<li>
+<p>開啟 MATLAB，在 command window 中輸入<code>mex -setup</code>會顯示電腦中目前有的 Compiler。下圖是預設顯示 C compiler，輸入<code>mex -setup C++</code>則可以查看 C++ compiler:
+<img src=/img/posts/MATLAB/MTIMESX/3.png alt></p>
+</li>
+<li>
+<p>輸入上一步驟中顯示的指令，選擇 C/C++ Compiler(若電腦沒有安裝 C/C++則必須先去安裝 Microsoft Visual C++)，我是選擇我電腦當中 C compiler 中最新版本:
+<img src=/img/posts/MATLAB/MTIMESX/4.png alt></p>
+</li>
+<li>
+<p>執行 <code>mtimesx_build.m</code> 檔案，一段時間過後最後看到"you may now use mtimesx"代表安裝成功:
+<img src=/img/posts/MATLAB/MTIMESX/5.png alt></p>
+</li>
+<li>
+<p>在其他位置試用 <code>mtimesx()</code>，會顯示函式還沒被加到 MATLAB 路徑中，點擊下圖中綠框字樣便會自動加入:
+<img src=/img/posts/MATLAB/MTIMESX/6.png alt></p>
+</li>
+</ol>
+<h1 id=使用方法與範例><strong>使用方法與範例</strong></h1>
+<p>必須先將兩個輸入矩陣中要做乘積的兩個維度移動到最前面(例如使用<a href=https://www.mathworks.com/help/matlab/ref/permute.html target=_blank>permute</a>
+)，且其他對應的維度值要相同，mtimesx 會在其他維度上自動作二維乘積。</p>
+<p>例如說現在要計算矩陣<code>A</code>(大小為<code>[a,b,d1,d2,d3,...]</code>)和矩陣<code>B</code>(大小為<code>[b,c,d1,d2,d3,...]</code>)，而 <code>C=mtimesx(A,B)</code>，矩陣<code>C</code>的大小便為<code>[a,c,d1,d2,d3,...]</code>。</p>
+<p>另外，也可輸入矩陣後面加上&rsquo;T',&lsquo;C&rsquo;,&lsquo;G&rsquo;來分別為輸入矩陣做轉置、共軛轉置、共軛，格式為<code>mtimesx( A [,transa] ,B [,transb] )</code>:</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:center>MATLAB 函式</th>
+<th style=text-align:center>同義公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>C = mtimesx(A,B)</td>
+<td style=text-align:center>C = A * B</td>
+</tr>
+<tr>
+<td style=text-align:center>C = mtimesx(A,&lsquo;T&rsquo;,B)</td>
+<td style=text-align:center>C = A.&rsquo; * B</td>
+</tr>
+<tr>
+<td style=text-align:center>C = mtimesx(A,B,&lsquo;g&rsquo;)</td>
+<td style=text-align:center>C = A * conj(B)</td>
+</tr>
+<tr>
+<td style=text-align:center>C = mtimesx(A,&lsquo;c&rsquo;,B,&lsquo;C&rsquo;)</td>
+<td style=text-align:center>C = A' * B'</td>
+</tr>
+</tbody>
+</table>
+<h1 id=實際測試><strong>實際測試</strong></h1>
+<p>當輸入矩陣的維度越多且維度值越大，<code>mtimesx()</code>能夠節省下來的時間就越多，如果是做 2~3 維的運算，使用<code>mtimesx()</code>反而會比較慢。以下是測試五維矩陣運算的執行時間比較:
+<img src=/img/posts/MATLAB/MTIMESX/try.png alt></p>
+<hr>
+<ul class=pager>
+<li class=previous>
+<a href=/2018/03/15/deep-learning-specialization-coursera/ data-toggle=tooltip data-placement=top title="吳恩達 Deep Learning Specialization -- 課程介紹與心得">&larr;
+Previous Post</a>
+</li>
+<li class=next>
+<a href=/2018/05/24/neural-style-transfer/ data-toggle=tooltip data-placement=top title="[Paper] Neural Style Transfer">Next
+Post &rarr;</a>
+</li>
+</ul>
+<div id=disqus-comment></div>
+</div>
+<div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+sidebar-container">
+<section>
+<hr class="hidden-sm hidden-xs">
+<h5><a href=/tags/>FEATURED TAGS</a></h5>
+<div class=tags>
+<a href=/tags/course title=course>
+course
+</a>
+<a href=/tags/css title=css>
+css
+</a>
+<a href=/tags/cv title=cv>
+cv
+</a>
+<a href=/tags/gcp title=gcp>
+gcp
+</a>
+<a href=/tags/gnn title=gnn>
+gnn
+</a>
+<a href=/tags/html title=html>
+html
+</a>
+<a href=/tags/matlab title=matlab>
+matlab
+</a>
+<a href=/tags/misc title=misc>
+misc
+</a>
+<a href=/tags/slides title=slides>
+slides
+</a>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<footer>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<ul class="list-inline text-center">
+<li>
+<a href rel=alternate type=application/rss+xml title="WHW blog">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=mailto:mattwang44@gmail.com>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/mattwang44>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://github.com/mattwang44>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://medium.com/@mattwang44>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+</ul>
+<p class="copyright text-muted">
+Copyright &copy; WHW blog 2021
+<br>
+<a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<script>function async(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
+<script>$('#tag_cloud').length!==0&&async("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
+<script>async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
+</body>
+</html>

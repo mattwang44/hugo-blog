@@ -1,0 +1,455 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta property="og:site_name" content="WHW blog">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://mattwang44.github.io//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
+<meta property="twitter:image" content="https://mattwang44.github.io//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
+<meta name=title content="HTML/CSS 101">
+<meta property="og:title" content="HTML/CSS 101">
+<meta property="twitter:title" content="HTML/CSS 101">
+<meta name=description content=" ">
+<meta property="og:description" content=" ">
+<meta property="twitter:description" content=" ">
+<meta property="twitter:card" content="summary">
+<meta name=keyword content="MattWang, blog, Taiwan">
+<link rel="shortcut icon" href=/img/favicon.ico>
+<title>HTML/CSS 101-MattWang Blog</title>
+<link rel=canonical href=/2020/09/11/html-css-101/>
+<link rel=stylesheet href=/css/iDisqus.min.css>
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/hux-blog.min.css>
+<link rel=stylesheet href=/css/zanshang.css>
+<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet type=text/css>
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/hux-blog.min.js></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type=text/javascript></script>
+<script type=text/x-mathjax-config>
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$']],
+      processEscapes: true
+    }
+  });
+</script>
+</head>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<div class=container-fluid>
+<div class="navbar-header page-scroll">
+<button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=/>WHW blog</a>
+</div>
+<div id=huxblog_navbar>
+<div class=navbar-collapse>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href=/>Home</a>
+</li>
+<li>
+<a href=/categories/tech>tech</a>
+</li>
+<li><a href=/top/about/>ABOUT</a></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script>
+<style type=text/css>header.intro-header{background-image:url(https://images.unsplash.com/photo-1523815085589-2ed388376202?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80)}</style>
+<header class=intro-header>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class=post-heading>
+<div class=tags>
+<a class=tag href=/tags/html title=HTML>
+HTML
+</a>
+<a class=tag href=/tags/css title=CSS>
+CSS
+</a>
+</div>
+<h1>HTML/CSS 101</h1>
+<h2 class=subheading></h2>
+<span class=meta>
+Posted by
+Matt Wang
+on
+Friday, September 11, 2020
+</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class=container>
+<div class=row>
+<div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+post-container">
+<header>
+<h2>Content</h2>
+</header>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#html>HTML</a>
+<ul>
+<li><a href=#dom-document-object-model>DOM (Document Object Model)</a></li>
+<li><a href=#common-tags>Common tags</a></li>
+<li><a href=#selectors>Selectors</a></li>
+<li><a href=#table>Table</a></li>
+</ul>
+</li>
+<li><a href=#css>CSS</a>
+<ul>
+<li><a href=#box-model>Box Model</a></li>
+<li><a href=#flexible-box>Flexible Box</a></li>
+<li><a href=#typography>Typography</a></li>
+</ul>
+</li>
+<li><a href=#assignment>Assignment</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id=html>HTML</h2>
+<h3 id=dom-document-object-model>DOM (Document Object Model)</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>html</span>&gt;
+  &lt;<span style=color:#ff79c6>head</span>&gt;
+    ...
+    <span style=color:#6272a4>&lt;!-- CDN, CSS files --&gt;</span>
+  &lt;/<span style=color:#ff79c6>head</span>&gt;
+
+  &lt;<span style=color:#ff79c6>body</span>&gt;
+    ...
+    <span style=color:#6272a4>&lt;!-- Content, JS scripts --&gt;</span>
+  &lt;/<span style=color:#ff79c6>body</span>&gt;
+&lt;/<span style=color:#ff79c6>html</span>&gt;
+</code></pre></div><h3 id=common-tags>Common tags</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:center>markdown</th>
+<th style=text-align:center>html</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center><code>#</code></td>
+<td style=text-align:center><code>&lt;h1>...&lt;/h1></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>##</code></td>
+<td style=text-align:center><code>&lt;h2>...&lt;/h2></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>**...**</code></td>
+<td style=text-align:center><code>&lt;b>...&lt;/b></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>_..._</code>, <code>_..._</code></td>
+<td style=text-align:center><code>&lt;i>...&lt;/i></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>-</code>, <code>*</code> (unordered list)</td>
+<td style=text-align:center><code>&lt;ul>&lt;li>...&lt;/li>&lt;/ul></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>1</code> (ordered list)</td>
+<td style=text-align:center><code>&lt;ol>&lt;li>...&lt;/li>&lt;/ol></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>[name](url)</code></td>
+<td style=text-align:center><code>&lt;a href="url"> name &lt;/a></code></td>
+</tr>
+<tr>
+<td style=text-align:center><code>![alt](img url)</code></td>
+<td style=text-align:center><code>&lt;img href="img url"></code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=selectors>Selectors</h3>
+<ul>
+<li><code>id</code>: unique id</li>
+<li><code>class</code>: classifier</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>img</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;blah1&#34;</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;c1&#34;</span> /&gt;
+&lt;<span style=color:#ff79c6>img</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;blah2&#34;</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;c2&#34;</span> /&gt;
+&lt;<span style=color:#ff79c6>img</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;blah3&#34;</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;c1 c2&#34;</span> /&gt;
+</code></pre></div><table>
+<thead>
+<tr>
+<th style=text-align:center>css selector</th>
+<th style=text-align:center>target</th>
+<th style=text-align:center>~specificity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center><code>#blah1</code></td>
+<td style=text-align:center><code>blah1</code> id</td>
+<td style=text-align:center>+++++</td>
+</tr>
+<tr>
+<td style=text-align:center><code>img</code></td>
+<td style=text-align:center><code>img</code> tag</td>
+<td style=text-align:center>+</td>
+</tr>
+<tr>
+<td style=text-align:center><code>.c1</code></td>
+<td style=text-align:center><code>c1</code> class</td>
+<td style=text-align:center>++</td>
+</tr>
+<tr>
+<td style=text-align:center><code>.c1.c2</code></td>
+<td style=text-align:center>have both <code>c1</code> class & <code>c2</code> class</td>
+<td style=text-align:center>+++</td>
+</tr>
+<tr>
+<td style=text-align:center><code>img[attr=val]</code></td>
+<td style=text-align:center><code>img</code> tag that has attribute is <code>val</code></td>
+<td style=text-align:center>++++</td>
+</tr>
+</tbody>
+</table>
+<h3 id=table>Table</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>table</span>&gt;
+  &lt;<span style=color:#ff79c6>thead</span>&gt;
+    &lt;<span style=color:#ff79c6>tr</span>&gt;
+      &lt;<span style=color:#ff79c6>th</span>&gt;ID&lt;/<span style=color:#ff79c6>th</span>&gt;
+      &lt;<span style=color:#ff79c6>th</span>&gt;Name&lt;/<span style=color:#ff79c6>th</span>&gt;
+    &lt;/<span style=color:#ff79c6>tr</span>&gt;
+  &lt;/<span style=color:#ff79c6>thead</span>&gt;
+  &lt;<span style=color:#ff79c6>tbody</span>&gt;
+    &lt;<span style=color:#ff79c6>tr</span>&gt;
+      &lt;<span style=color:#ff79c6>td</span>&gt;1&lt;/<span style=color:#ff79c6>td</span>&gt;
+      &lt;<span style=color:#ff79c6>td</span>&gt;ABC&lt;/<span style=color:#ff79c6>td</span>&gt;
+    &lt;/<span style=color:#ff79c6>tr</span>&gt;
+    &lt;<span style=color:#ff79c6>tr</span>&gt;
+      &lt;<span style=color:#ff79c6>td</span>&gt;2&lt;/<span style=color:#ff79c6>td</span>&gt;
+      &lt;<span style=color:#ff79c6>td</span>&gt;DEF&lt;/<span style=color:#ff79c6>td</span>&gt;
+    &lt;/<span style=color:#ff79c6>tr</span>&gt;
+  &lt;/<span style=color:#ff79c6>tbody</span>&gt;
+&lt;/<span style=color:#ff79c6>table</span>&gt;
+</code></pre></div><h2 id=css>CSS</h2>
+<h3 id=box-model>Box Model</h3>
+<link rel=stylesheet href=/css/hugo-easy-gallery.css>
+<div class=box>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<div class=img>
+<img itemprop=thumbnail src=https://img.alicdn.com/tfs/TB13u.4n5rpK1RjSZFhXXXSdXXa-377-340.png alt="Box model">
+</div>
+<a href=https://weex.apache.org/docs/styles/common-styles.html itemprop=contentUrl></a>
+<figcaption align=center>
+<p>Box model</p>
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>padding-top</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>12px</span>
+<span style=color:#ff79c6>padding-right</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>13px</span>
+<span style=color:#ff79c6>padding-bottom</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>14px</span>
+<span style=color:#ff79c6>padding-left</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>15px</span>
+</code></pre></div></li>
+<li>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>padding</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>12px</span> <span style=color:#ff79c6>13px</span> <span style=color:#ff79c6>14px</span> <span style=color:#ff79c6>15px</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* top right bottom left */</span>
+</code></pre></div></li>
+<li>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>padding</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>12px</span> <span style=color:#ff79c6>24px</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* top=bottom=12px, right=left=24px */</span>
+</code></pre></div></li>
+<li>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>padding</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>12px</span> <span style=color:#ff79c6>20px</span> <span style=color:#ff79c6>24px</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* top=12px, right=left=20px, bottom=24px */</span>
+</code></pre></div></li>
+</ul>
+<h3 id=flexible-box>Flexible Box</h3>
+<ul>
+<li>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>display</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>block</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* defualt */</span>
+<span style=color:#ff79c6>display</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>flex</span><span style=color:#ff79c6>;</span>
+</code></pre></div></li>
+<li><code>flex</code> only adjust 1D of elements but the directions can be determined by <code>flex-direction</code>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>flex-direction</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>row</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* default, left to right */</span>
+<span style=color:#ff79c6>flex-direction</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>row-reverse</span><span style=color:#ff79c6>;</span>
+<span style=color:#ff79c6>flex-direction</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>column</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* top to bottom */</span>
+<span style=color:#ff79c6>flex-direction</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>column-reverse</span><span style=color:#ff79c6>;</span>
+</code></pre></div></li>
+<li>Implement 2-by-2 grid:
+<pre><code>&lt;div&gt; -&gt; flex-direction: column;
+  &lt;d1-d2-wrapper&gt; -&gt; flex-direction: row;
+  &lt;d3-d4-wrapper&gt; -&gt; flex-direction: row;
+&lt;/div&gt;
+</code></pre></li>
+</ul>
+<h3 id=typography>Typography</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#ff79c6>font-family</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>Roboto</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>Helvetica</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>Arial</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>sans-serif</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* fallback if failed to load, sans-serif-&gt;無襯線 */</span>
+
+<span style=color:#ff79c6>font-size</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>12px</span><span style=color:#ff79c6>;</span>
+
+<span style=color:#ff79c6>font-weight</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>100</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* (, 200, ..., 900, normal, lighter, bolder) */</span>
+
+<span style=color:#ff79c6>line-height</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>1</span>.<span style=color:#50fa7b>2em</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* element, 1.2 x font-size */</span>
+<span style=color:#ff79c6>line-height</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>1</span>.<span style=color:#50fa7b>2rem</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* root element, 1.2 x root font-size */</span>
+
+<span style=color:#ff79c6>color</span><span style=color:#ff79c6>:</span> #<span style=color:#ff79c6>FFFFFF</span><span style=color:#ff79c6>;</span>
+<span style=color:#ff79c6>color</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>rgb</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>r</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>g</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>b</span><span style=color:#ff79c6>);</span>
+<span style=color:#ff79c6>color</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>rgba</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>r</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>g</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>b</span><span style=color:#ff79c6>,</span> <span style=color:#ff79c6>a</span><span style=color:#ff79c6>);</span>
+
+<span style=color:#ff79c6>text-align</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>center</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* (, right, ...) */</span>
+
+<span style=color:#ff79c6>text-decoration</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>underline</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/*  (, italic, ...) */</span>
+
+<span style=color:#ff79c6>letter-spacing</span><span style=color:#ff79c6>:</span> <span style=color:#ff79c6>1px</span><span style=color:#ff79c6>;</span> <span style=color:#6272a4>/* space between letters */</span>
+</code></pre></div><h2 id=assignment>Assignment</h2>
+<p>macOS calculator</p>
+<p class=codepen data-height=265 data-theme-id=dark data-default-tab=css,result data-user=mattwang44 data-slug-hash=eYZLKpw style="height:265px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:2px solid;margin:1em 0;padding:1em" data-pen-title="Assignment 00: mac-calculator">
+<span>See the Pen <a href=https://codepen.io/mattwang44/pen/eYZLKpw>
+Assignment 00: mac-calculator</a> by Wei-Hsiang Wang (<a href=https://codepen.io/mattwang44>@mattwang44</a>)
+on <a href=https://codepen.io>CodePen</a>.</span>
+</p>
+<script async src=https://cpwebassets.codepen.io/assets/embed/ei.js></script>
+<hr>
+<ul class=pager>
+<li class=previous>
+<a href=/2020/07/01/gcp-ace/ data-toggle=tooltip data-placement=top title="Preparation of GCP ACE Certification (2020)">&larr;
+Previous Post</a>
+</li>
+</ul>
+<div id=disqus-comment></div>
+</div>
+<div class="col-lg-11 col-lg-offset-1
+col-md-10 col-md-offset-1
+sidebar-container">
+<section>
+<hr class="hidden-sm hidden-xs">
+<h5><a href=/tags/>FEATURED TAGS</a></h5>
+<div class=tags>
+<a href=/tags/course title=course>
+course
+</a>
+<a href=/tags/css title=css>
+css
+</a>
+<a href=/tags/cv title=cv>
+cv
+</a>
+<a href=/tags/gcp title=gcp>
+gcp
+</a>
+<a href=/tags/gnn title=gnn>
+gnn
+</a>
+<a href=/tags/html title=html>
+html
+</a>
+<a href=/tags/matlab title=matlab>
+matlab
+</a>
+<a href=/tags/misc title=misc>
+misc
+</a>
+<a href=/tags/slides title=slides>
+slides
+</a>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<footer>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<ul class="list-inline text-center">
+<li>
+<a href rel=alternate type=application/rss+xml title="WHW blog">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=mailto:mattwang44@gmail.com>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/mattwang44>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://github.com/mattwang44>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://medium.com/@mattwang44>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang>
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+</ul>
+<p class="copyright text-muted">
+Copyright &copy; WHW blog 2021
+<br>
+<a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<script>function async(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
+<script>$('#tag_cloud').length!==0&&async("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
+<script>async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
+</body>
+</html>
