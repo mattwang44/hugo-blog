@@ -1,6 +1,6 @@
 ---
 title: "Preparation of GCP ACE Certification (2020)"
-subtitle: "How I prepare GCP ACE exam in 2 weeks"
+subtitle: "How I prepare for GCP ACE exam"
 description: " "
 excerpt: " "
 date: 2020-07-01
@@ -30,7 +30,7 @@ I decided to have a two-week off studying GCP ACE exam on my own and leave all t
 I've passed the exam in late June of 2020 and got the [certification](https://www.credential.net/6ed46944-6ab9-4f87-b19e-eea0d4a5517b?key=6f4f5f74408e1291fc997d8842f33f144a89ec669e204a3567c18d4566a4a0bb).
 This article records how I prepare for the exam and those awesome reading materials I've found.
 
-# Preparation Materials
+## Preparation Materials
 
 During my preparation of GCP ACE Exam, I spent most of time on these materials:
 
@@ -80,15 +80,15 @@ So, it costed me about \$140 to get the ACE certification:
 | [Whizlabs: Mock Exams][whizlabs-ace]                 | \$10  | \$19.95 on the price tag but currently 50% off due to COVID-19      |
 | [Udemy: Ultimate ACE 2020][udemy-gcp-ace]            | \$10  | I bought it long ago when it's on sale                              |
 
-# Useful Materials
+## Useful Materials
 
-## About ACE Certification
+### About ACE Certification
 
 - [Exam Overview](https://cloud.google.com/certification/cloud-engineer)
 - [Official Exam Guide](https://cloud.google.com/certification/guides/cloud-engineer)
 - [Google Cloud Training](https://cloud.google.com/training)
 
-## Online Courses & Mock Exams
+### Online Courses & Mock Exams
 
 |                                        Name                                        |      Platform       |              Price              | Course | Mock Exam |                                                                                     |
 | :--------------------------------------------------------------------------------: | :-----------------: | :-----------------------------: | :----: | :-------: | :---------------------------------------------------------------------------------: |
@@ -101,16 +101,16 @@ So, it costed me about \$140 to get the ACE certification:
 | [Google Cloud Certified - Associate Cloud Engineer Practice Exams][braincert-mock] |      BrainCert      |              \$30               |   N    | Y (250Q)  |                         Didn't buy it so difficulty unknown                         |
 |               [Hand-on Labs@Qwiklabs](https://google.qwiklabs.com/)                |      Qwiklabs       |        Charge by credit         |   N    |     N     | For hand-on labs. [Free credits][free-qwiklab-code] are available from time to time |
 
-## Study Materials
+### Study Materials
 
-### Well-known Experts
+#### Well-known Experts
 
 |                 Name                 |                                                             Repo                                                              |                        Medium                        |                                        YouTube                                         |                        Course                        |
 | :----------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------: | :------------------------------------------------------------------------------------: | :--------------------------------------------------: |
 |              sathishvj               | [awesome-gcp-certifications](https://github.com/sathishvj/awesome-gcp-certifications/blob/master/associate-cloud-engineer.md) |     [sathish vj](https://medium.com/@sathishvj)      | [AwesomeGCP](https://www.youtube.com/playlist?list=PLQMsfKRZZviRwqJwNmh1eAWnRMvlrk40x) |                          -                           |
 | Joseph Holbrook (The Cloud Tech Guy) |                                                               -                                                               | [Joseph Holbrook](https://medium.com/@jholbrook2015) |   [The Cloud Tech Guy Joe](https://www.youtube.com/channel/UCLcRBsiL_BIgDdn7P6uZbnQ)   | [Udemy](https://www.udemy.com/user/joseph-holbrook/) |
 
-### Other
+#### Other
 
 - [ddneves/awesome-gcp-certifications (outdated)](https://github.com/ddneves/awesome-gcp-certifications#Google-Cloud---Associate-Cloud-Engineer)
 - [Whizlabs' ACE cheatsheet](https://www.whizlabs.com/blog/gcp-cheat-sheet/)

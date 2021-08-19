@@ -10,7 +10,7 @@ published: true
 math: true
 tags:
   - GCP
-  - Coursera
+  - Course
 URL: "/2020/06/15/gcp-ace-note/"
 categories: ["Tech"]
 ---

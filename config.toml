@@ -30,13 +30,13 @@ home = ["HTML", "RSS", "Algolia"]
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = true
+  algolia_search = false
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""
 
   # Sidebar settings
-  sidebar_about_description = "Software Developer"
+  sidebar_about_description = "Matt Wang"
   sidebar_avatar = "img/avatar.gif"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
@@ -67,7 +67,7 @@ home = ["HTML", "RSS", "Algolia"]
   email          = "mattwang44@gmail.com"
   facebook      = "https://www.facebook.com/profile.php?id=100000194291071"
   #googleplus    = "full profile url in googleplus"
-  #twitter       = "full profile url in twitter"
+  twitter       = "https://twitter.com/mattwang44"
   linkedin       = "https://www.linkedin.com/in/wei-hsiang-wang-60841b108/"
   stackoverflow  = "https://stackoverflow.com/users/7969188/matt-wang"
   #instagram     = "full profile url in instagram"

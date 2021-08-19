@@ -1,5 +1,5 @@
 ---
-title: "Use Hugo for the first time"
+title: "Hugo Tips"
 subtitle: ""
 description: " "
 excerpt: " "
@@ -9,7 +9,7 @@ image: "https://s3.wp.wsu.edu/uploads/sites/1417/2017/04/ms_plant_health_banner_
 published: true
 tags:
   - misc
-URL: "/2020/06/11/first-met-hugo/"
+URL: "/2020/06/11/hugo-tips/"
 categories: ["Tech"]
 ---
 
@@ -18,6 +18,7 @@ categories: ["Tech"]
 - [Hugo native shortcodes](https://gohugo.io/content-management/shortcodes/)
 - [Embed Google Presentation](https://ashish.one/gist/add-responsive-google-slides-on-hugo/)
 - [`figure` & `gallery`](https://github.com/liwenyip/hugo-easy-gallery/)
+- [Insert HTML in Markdown](https://anaulin.org/blog/hugo-raw-html-shortcode/)
 
 # Enable MathJax
 
