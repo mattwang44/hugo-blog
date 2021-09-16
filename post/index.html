@@ -20,9 +20,9 @@
 <link rel=canonical href=/post/>
 <link rel=stylesheet href=/css/iDisqus.min.css>
 <link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/hux-blog.min.css>
+<link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
 <link rel=stylesheet href=/css/zanshang.css>
-<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet type=text/css>
+<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css>
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/hux-blog.min.js></script>
@@ -47,6 +47,7 @@
 <li>
 <a href=/categories/tech>tech</a>
 </li>
+<li><a href=/top/archive/>ARCHIVE</a></li>
 <li><a href=/top/about/>ABOUT</a></li>
 </ul>
 </div>
@@ -122,64 +123,64 @@ slides
 <li>
 <a href=/post/index.xml rel=alternate type=application/rss+xml title="WHW's blog">
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a href=mailto:mattwang44@gmail.com>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a href=https://twitter.com/mattwang44>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071">
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://github.com/mattwang44>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://medium.com/@mattwang44>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-medium fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
@@ -194,8 +195,8 @@ Copyright &copy; WHW's blog 2021
 </div>
 </div>
 </footer>
-<script>function async(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
-<script>$('#tag_cloud').length!==0&&async("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
-<script>async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
+<script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
+<script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
+<script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
 </body>
 </html>

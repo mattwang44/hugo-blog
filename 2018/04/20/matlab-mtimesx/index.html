@@ -20,9 +20,9 @@
 <link rel=canonical href=/2018/04/20/matlab-mtimesx/>
 <link rel=stylesheet href=/css/iDisqus.min.css>
 <link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/hux-blog.min.css>
+<link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
 <link rel=stylesheet href=/css/zanshang.css>
-<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet type=text/css>
+<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css>
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/hux-blog.min.js></script>
@@ -47,6 +47,7 @@
 <li>
 <a href=/categories/tech>tech</a>
 </li>
+<li><a href=/top/archive/>ARCHIVE</a></li>
 <li><a href=/top/about/>ABOUT</a></li>
 </ul>
 </div>
@@ -103,31 +104,38 @@ post-container">
 <li>
 <p>首先，先從<a href=https://www.mathworks.com/matlabcentral/fileexchange/25977-mtimesx-fast-matrix-multiply-with-multi-dimensional-support target=_blank>MTIMESX 之 Mathworks 頁面</a>
 上將其下載、解壓縮，並將資料夾改名為<code>mtimesx</code>:
-<img src=/img/posts/MATLAB/MTIMESX/0.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/0.png alt>
+</p>
 </li>
 <li>
 <p>將<code>mtimesx_build.m</code>檔案中第 166 行改成 <code>mexopts = [prefdir '\mex_C_win64.xml'];</code>:
-<img src=/img/posts/MATLAB/MTIMESX/1.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/1.png alt>
+</p>
 </li>
 <li>
 <p>將 <code>mtimesx</code>資料夾移動到 MATLAB 安裝位置中的 toolbox 資料夾，它的位置大概會像是 <code>C:\Program Files\MATLAB\R2017b\toolbox</code>:
-<img src=/img/posts/MATLAB/MTIMESX/2.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/2.png alt>
+</p>
 </li>
 <li>
 <p>開啟 MATLAB，在 command window 中輸入<code>mex -setup</code>會顯示電腦中目前有的 Compiler。下圖是預設顯示 C compiler，輸入<code>mex -setup C++</code>則可以查看 C++ compiler:
-<img src=/img/posts/MATLAB/MTIMESX/3.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/3.png alt>
+</p>
 </li>
 <li>
 <p>輸入上一步驟中顯示的指令，選擇 C/C++ Compiler(若電腦沒有安裝 C/C++則必須先去安裝 Microsoft Visual C++)，我是選擇我電腦當中 C compiler 中最新版本:
-<img src=/img/posts/MATLAB/MTIMESX/4.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/4.png alt>
+</p>
 </li>
 <li>
 <p>執行 <code>mtimesx_build.m</code> 檔案，一段時間過後最後看到"you may now use mtimesx"代表安裝成功:
-<img src=/img/posts/MATLAB/MTIMESX/5.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/5.png alt>
+</p>
 </li>
 <li>
 <p>在其他位置試用 <code>mtimesx()</code>，會顯示函式還沒被加到 MATLAB 路徑中，點擊下圖中綠框字樣便會自動加入:
-<img src=/img/posts/MATLAB/MTIMESX/6.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/6.png alt>
+</p>
 </li>
 </ol>
 <h1 id=使用方法與範例><strong>使用方法與範例</strong></h1>
@@ -163,7 +171,8 @@ post-container">
 </table>
 <h1 id=實際測試><strong>實際測試</strong></h1>
 <p>當輸入矩陣的維度越多且維度值越大，<code>mtimesx()</code>能夠節省下來的時間就越多，如果是做 2~3 維的運算，使用<code>mtimesx()</code>反而會比較慢。以下是測試五維矩陣運算的執行時間比較:
-<img src=/img/posts/MATLAB/MTIMESX/try.png alt></p>
+<img src=/img/posts/MATLAB/MTIMESX/try.png alt>
+</p>
 <hr>
 <ul class=pager>
 <li class=previous>
@@ -225,64 +234,64 @@ slides
 <li>
 <a href rel=alternate type=application/rss+xml title="WHW's blog">
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a href=mailto:mattwang44@gmail.com>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a href=https://twitter.com/mattwang44>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071">
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://github.com/mattwang44>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://medium.com/@mattwang44>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-medium fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
 <li>
 <a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang>
 <span class="fa-stack fa-lg">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
 </span>
 </a>
 </li>
@@ -297,8 +306,8 @@ Copyright &copy; WHW's blog 2021
 </div>
 </div>
 </footer>
-<script>function async(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
-<script>$('#tag_cloud').length!==0&&async("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
-<script>async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
+<script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
+<script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
+<script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
 </body>
 </html>
