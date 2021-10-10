@@ -5,7 +5,7 @@ description: ""
 excerpt: ""
 date: 2018-08-09
 author: "Matt Wang"
-image: "https://www.lafleurgodfrey.com/images/stock/winter-cityscape-banner.jpg"
+image: "http://www.forge22.com/wp-content/uploads/chicago-urban-night-skyline-3360x1050-1024x320.jpg"
 published: true
 tags:
   - CV
