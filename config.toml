@@ -4,7 +4,7 @@ theme = "cleanwhite"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
-googleAnalytics = ""
+googleAnalytics = "UA-210096427-1"
 preserveTaxonomyNames = true
 paginate = 10 #frontpage pagination
 hasCJKLanguage = true
@@ -15,9 +15,9 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80"
-  SEOTitle = "MattWang Blog"
+  SEOTitle = "Matt Wang's Blog"
   description = "Wei-Hisang (Matt) Wang"
-  keyword = "MattWang, blog, Taiwan"
+  keyword = "Matt Wang, blog, Taiwan"
   slogan = "( ◎︣ ͜ʖ ◎︣ )"
 
   image_404 = "img/404-bg.jpg"
