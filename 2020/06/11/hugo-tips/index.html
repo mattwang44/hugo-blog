@@ -91,11 +91,16 @@ post-container">
 </header>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#shortcodes>Shortcodes</a></li>
+<li>
+<ul>
+<li><a href=#shortcode-collection>Shortcode Collection</a></li>
 <li><a href=#enable-mathjax>Enable MathJax</a></li>
+<li><a href=#simple-seo>Simple SEO</a></li>
+</ul>
+</li>
 </ul>
 </nav>
-<h1 id=shortcodes>Shortcodes</h1>
+<h2 id=shortcode-collection>Shortcode Collection</h2>
 <ul>
 <li><a href=https://gohugo.io/content-management/shortcodes/ target=_blank>Hugo native shortcodes</a>
 </li>
@@ -106,7 +111,7 @@ post-container">
 <li><a href=https://anaulin.org/blog/hugo-raw-html-shortcode/ target=_blank>Insert HTML in Markdown</a>
 </li>
 </ul>
-<h1 id=enable-mathjax>Enable MathJax</h1>
+<h2 id=enable-mathjax>Enable MathJax</h2>
 <p>Add following lines into <code>theme/&lt;theme>/layout/partials/math.html</code></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>script</span>
   <span style=color:#50fa7b>src</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span>
@@ -120,7 +125,19 @@ post-container">
 <pre tabindex=0><code>{{ if or .Params.math .Site.Params.math }}
 {{ partial &quot;math.html&quot; . }}
 {{ end }}
-</code></pre><p>and then put the parameter <code>math: true</code> on the target page to enable MathJax.</p>
+</code></pre><p>and then put the parameter <code>math: true</code> in the header of the article page to enable MathJax.</p>
+<h2 id=simple-seo>Simple SEO</h2>
+<ul>
+<li><a href=https://gohugo.io/templates/sitemap-template/#configure-sitemapxml target=_blank>configure sitemap</a>
+and provide the URL of sitemap (e.g. <code>&lt;host>/sitemap/</code>) to <a href=https://search.google.com/search-console target=_blank>Google Search Console</a>
+.</li>
+<li>Already done by the theme I used:
+<ul>
+<li>Integrate with Google Analytics.</li>
+<li>Configure Open Graph tags.</li>
+</ul>
+</li>
+</ul>
 <hr>
 <ul class=pager>
 <li class=previous>
