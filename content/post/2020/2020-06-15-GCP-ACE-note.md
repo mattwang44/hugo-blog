@@ -1,8 +1,8 @@
 ---
 title: "Course Note: Cloud Engineering with GCP on Coursera"
-subtitle: "Course note for the preparation of GCP ACE Certificate"
-description: " "
-excerpt: " "
+subtitle: ""
+description: "Course note of Cloud Engineering with GCP (for the preparation of GCP Associate Cloud Engineer Certification Exam)"
+excerpt: "Course note of Cloud Engineering with GCP (for the preparation of GCP Associate Cloud Engineer Certification Exam)"
 date: 2020-06-15
 author: "Matt Wang"
 image: "https://images.unsplash.com/photo-1523815085589-2ed388376202?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80"

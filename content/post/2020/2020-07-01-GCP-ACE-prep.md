@@ -1,8 +1,8 @@
 ---
-title: "Preparation of GCP ACE Certification (2020)"
-subtitle: "How I prepare for GCP ACE exam"
-description: " "
-excerpt: " "
+title: "My Preparation of GCP ACE Certification (2020)"
+subtitle: ""
+description: "Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams."
+excerpt: "Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams."
 date: 2020-07-01
 author: "Matt Wang"
 image: "https://images.unsplash.com/photo-1562773534-b536e07e1a66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
