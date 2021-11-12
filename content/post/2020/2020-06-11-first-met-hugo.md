@@ -19,6 +19,7 @@ categories: ["Tech"]
 - [Embed Google Presentation](https://ashish.one/gist/add-responsive-google-slides-on-hugo/)
 - [`figure` & `gallery`](https://github.com/liwenyip/hugo-easy-gallery/)
 - [Insert HTML in Markdown](https://anaulin.org/blog/hugo-raw-html-shortcode/)
+- [Tooltips](https://www.starfallprojects.co.uk/posts/hugo-tooltip-shortcode/)
 
 ## Enable MathJax
 
