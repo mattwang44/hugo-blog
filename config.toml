@@ -1,5 +1,5 @@
 baseurl = "https://mattwang44.dev/"
-title = "WHW's blog"
+title = "Matt Wang's Note"
 theme = "cleanwhite"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
@@ -15,10 +15,10 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80"
-  SEOTitle = "Matt Wang's Blog"
-  description = "Wei-Hisang (Matt) Wang"
-  keyword = "Matt Wang, blog, Taiwan"
-  slogan = "( ◎︣ ͜ʖ ◎︣ )"
+  SEOTitle = "Matt Wang's Note"
+  description = "Wei-Hsiang (Matt) Wang"
+  keyword = "Matt Wang, Wei-Hsiang Wang, blog, Taiwan"
+  slogan = ""
 
   image_404 = "img/404-bg.jpg"
   title_404 = "not found, so blue :("
@@ -37,7 +37,7 @@ home = ["HTML", "RSS", "Algolia"]
 
   # Sidebar settings
   sidebar_about_description = "Matt Wang"
-  sidebar_avatar = "img/avatar.gif"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/avatar.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
   featured_condition_size = 0
