@@ -1,106 +1,22 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta property="og:site_name" content="Matt Wang's Note">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
-<meta property="twitter:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
-<meta name=title content="My Preparation of GCP ACE Certification (2020)">
-<meta property="og:title" content="My Preparation of GCP ACE Certification (2020)">
-<meta property="twitter:title" content="My Preparation of GCP ACE Certification (2020)">
-<meta name=description content="Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams.">
-<meta property="og:description" content="Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams.">
-<meta property="twitter:description" content="Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams.">
-<meta property="twitter:card" content="summary">
-<meta name=keyword content="Matt Wang, Wei-Hsiang Wang, blog, Taiwan">
-<link rel="shortcut icon" href=/img/favicon.ico>
-<title>My Preparation of GCP ACE Certification (2020)-Matt Wang's Note</title>
-<link rel=canonical href=/2020/07/01/gcp-ace/>
-<link rel=stylesheet href=/css/iDisqus.min.css>
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
-<link rel=stylesheet href=/css/zanshang.css>
-<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css>
-<script src=/js/jquery.min.js></script>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Matt Wang's Note"><meta property="og:type" content="article"><meta property="og:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80"><meta property="twitter:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80"><meta name=title content="My Preparation of GCP ACE Certification (2020)"><meta property="og:title" content="My Preparation of GCP ACE Certification (2020)"><meta property="twitter:title" content="My Preparation of GCP ACE Certification (2020)"><meta name=description content="Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams."><meta property="og:description" content="Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams."><meta property="twitter:description" content="Learning materials for Google Cloud Platform (GCP) Associate Cloud Engineer (ACE) Certification Exam, including online courses, tutorial videos, notes, mock exams."><meta property="twitter:card" content="summary"><meta name=keyword content="Matt Wang, Wei-Hsiang Wang, blog, Taiwan"><link rel="shortcut icon" href=/img/favicon.ico><title>My Preparation of GCP ACE Certification (2020)-Matt Wang's Note</title><link rel=canonical href=/2020/07/01/gcp-ace/><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
-<script src=/js/hux-blog.min.js></script>
-</head>
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-<div class=container-fluid>
-<div class="navbar-header page-scroll">
-<button type=button class=navbar-toggle>
+<script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
-<span class=icon-bar></span>
-</button>
-<a class=navbar-brand href=/>Matt Wang's Note</a>
-</div>
-<div id=huxblog_navbar>
-<div class=navbar-collapse>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a href=/>Home</a>
-</li>
-<li>
-<a href=/categories/tech>tech</a>
-</li>
-<li><a href=/top/archive/>ARCHIVE</a></li>
-<li><a href=/top/about/>ABOUT</a></li>
-</ul>
-</div>
-</div>
-</div>
-</nav>
-<script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script>
-<style type=text/css>header.intro-header{background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(https://images.unsplash.com/photo-1562773534-b536e07e1a66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)}</style>
-<header class=intro-header>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<div class=tags>
-<a class=tag href=/tags/gcp title=GCP>
-GCP
-</a>
-</div>
-<h1>My Preparation of GCP ACE Certification (2020)</h1>
-<h2 class=subheading></h2>
-<span class=meta>
-Posted by
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Matt Wang's Note</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>Home</a></li><li><a href=/categories/tech>tech</a></li><li><a href=/top/archive/>ARCHIVE</a></li><li><a href=/top/about/>ABOUT</a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(https://images.unsplash.com/photo-1562773534-b536e07e1a66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/gcp title=GCP>GCP</a></div><h1>My Preparation of GCP ACE Certification (2020)</h1><h2 class=subheading></h2><span class=meta>Posted by
 Matt Wang
 on
-Wednesday, July 1, 2020
-</span>
-</div>
-</div>
-</div>
-</div>
-</header>
-<article>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2
+Wednesday, July 1, 2020</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
-post-container">
-<div class=fb-like data-href=https://mattwang44.dev/2020/07/01/gcp-ace/ data-width data-layout=standard data-action=like data-size=small data-share=true></div>
-<p>Go to <a href=/2020/06/15/gcp-ace-note/>this article</a>
-for the note of the Coursera course <a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Cloud Engineering with GCP</a>
-</p>
-<p>After sailing through the storm with my company (thank you COVID-19 😵),
+post-container"><div class=fb-like data-href=https://mattwang44.dev/2020/07/01/gcp-ace/ data-width data-layout=standard data-action=like data-size=small data-share=true></div><p>Go to <a href=/2020/06/15/gcp-ace-note/>this article</a>
+for the note of the Coursera course <a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Cloud Engineering with GCP</a></p><p>After sailing through the storm with my company (thank you COVID-19 😵),
 I decided to have a two-week off studying GCP ACE exam on my own and leave all the things behind.
 I&rsquo;ve passed the exam in late June of 2020 and got the <a href="https://www.credential.net/6ed46944-6ab9-4f87-b19e-eea0d4a5517b?key=6f4f5f74408e1291fc997d8842f33f144a89ec669e204a3567c18d4566a4a0bb" target=_blank>certification</a>
 .
-This article records how I prepare for the exam and those awesome reading materials I&rsquo;ve found.</p>
-<h2 id=preparation-materials>Preparation Materials</h2>
-<p>During my preparation of GCP ACE Exam, I spent most of time on these materials:</p>
-<ul>
-<li>
-<p><strong><a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Course: Cloud Engineering with GCP</a>
-</strong>:</p>
-<p>This specialization, which is recommended by GCP officially and many examinees,
+This article records how I prepare for the exam and those awesome reading materials I&rsquo;ve found.</p><h2 id=preparation-materials>Preparation Materials</h2><p>During my preparation of GCP ACE Exam, I spent most of time on these materials:</p><ul><li><p><strong><a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Course: Cloud Engineering with GCP</a>
+</strong>:</p><p>This specialization, which is recommended by GCP officially and many examinees,
 contains four courses that provide the necessary knowledge and one course briefly
 introduce most of the topics listed in the official exam guide.
 Before taking the exam, I watched all the video sessions twice,
@@ -108,400 +24,60 @@ ran through all the hands-on labs at least once, and passed all the quiz
 (to get the course certificate). However, it does not cover much about GKE,
 networking, and IAM related knowledge. You may need to spend more time on
 the documents of these topics or hand-on labs on <a href=https://google.qwiklabs.com/ target=_blank>Qwiklabs</a>
-.</p>
-</li>
-<li>
-<p><strong><a href=https://google.qwiklabs.com/ target=_blank>Qwiklabs</a>
-</strong>:</p>
-<p>The labs embedded in Coursera course are actually hosted by Qwiklabs,
+.</p></li><li><p><strong><a href=https://google.qwiklabs.com/ target=_blank>Qwiklabs</a>
+</strong>:</p><p>The labs embedded in Coursera course are actually hosted by Qwiklabs,
 so if you want more hand-on practices without adding too much expense, Qwiklabs is your best choice.
 I started to learn about GCP in late 2018 and have completed <a href=https://google.qwiklabs.com/public_profiles/b323116d-a497-4a5e-bc95-f14a1842f059 target=_blank>several quests</a>
 before I decided to take the exam. If you&rsquo;re new to Qwiklabs, you can get the
 <a href=https://go.qwiklabs.com/cloud-study-jams-2020 target=_blank>free one-month-pass</a>
 if you finish specific quests.
 Besides, Qwiklabs releases free credits from time-to-time and you can find the redeem codes from
-Qwiklabs' <a href=https://www.facebook.com/qwiklabs/ target=_blank>Facebook</a>
+Qwiklabs&rsquo; <a href=https://www.facebook.com/qwiklabs/ target=_blank>Facebook</a>
 or <a href="https://twitter.com/qwiklabs?lang=en" target=_blank>Twitter</a>
 or just go to <a href=https://medium.com/@sathishvj/qwiklabs-free-codes-gcp-and-aws-e40f3855ffdb target=_blank>sathishvj&amp;rsquo;s post</a>
-.</p>
-</li>
-<li>
-<p><strong><a href=https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/ target=_blank>Whizlabs' ACE Mock Exams (160Q)</a>
-</strong>:</p>
-<p>I found several mock exam providers and randomly chose Whizlabs after finishing its free 25 questions.
+.</p></li><li><p><strong><a href=https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/ target=_blank>Whizlabs&amp;rsquo; ACE Mock Exams (160Q)</a>
+</strong>:</p><p>I found several mock exam providers and randomly chose Whizlabs after finishing its free 25 questions.
 In my opinion, it&rsquo;s a bit harder than the actual exam.
 I failed all three mock exams when I first took them,
 but learned a lot from searching the answer of each question.
 However, I found <a href=https://acloud.guru/forums/gcp-certified-associate-cloud-engineer/discussion/-LrSl-HrhjbJa95KzcZf/Which%20Exam%20simulator~2FPractice%20exam%20would%20be%20the%20closest%20to%20an%20actual%20exam%3F target=_blank>this post</a>
 after taking the exam saying that Whizlabs might steal the questions from official exam.
-I might choose other providers if I found the post before the exam.</p>
-</li>
-<li>
-<p><strong><a href=https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/ target=_blank>Udemy: Ultimate ACE 2020</a>
-</strong>:</p>
-<p>Before taking the exam, I discovered that I bought this on Udemy more than one year ago but forgot it since then.
+I might choose other providers if I found the post before the exam.</p></li><li><p><strong><a href=https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/ target=_blank>Udemy: Ultimate ACE 2020</a>
+</strong>:</p><p>Before taking the exam, I discovered that I bought this on Udemy more than one year ago but forgot it since then.
 I skipped the courses and took the practice exam only.
-Although it&rsquo;s slightly easier than the actual exam, I think it&rsquo;s well-designed and could be a helpful resource if I had more time on it.</p>
-</li>
-</ul>
-<p>So, it costed me about $140 to get the ACE certification:</p>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Item</th>
-<th style=text-align:left>Price</th>
-<th style=text-align:left>Note</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left>Exam registration</td>
-<td style=text-align:left>$70</td>
-<td style=text-align:left>Normally it&rsquo;s $125 but somehow it&rsquo;s cheaper in Taiwan</td>
-</tr>
-<tr>
-<td style=text-align:left><a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Coursera: Cloud Engineering with GCP</a>
-</td>
-<td style=text-align:left>$49</td>
-<td style=text-align:left>Note that GCP releases free one-month-pass a couple times in a year</td>
-</tr>
-<tr>
-<td style=text-align:left><a href=https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/ target=_blank>Whizlabs: Mock Exams</a>
-</td>
-<td style=text-align:left>$10</td>
-<td style=text-align:left>$19.95 on the price tag but currently 50% off due to COVID-19</td>
-</tr>
-<tr>
-<td style=text-align:left><a href=https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/ target=_blank>Udemy: Ultimate ACE 2020</a>
-</td>
-<td style=text-align:left>$10</td>
-<td style=text-align:left>I bought it long ago when it&rsquo;s on sale</td>
-</tr>
-</tbody>
-</table>
-<h2 id=useful-materials>Useful Materials</h2>
-<h3 id=about-ace-certification>About ACE Certification</h3>
-<ul>
-<li><a href=https://cloud.google.com/certification/cloud-engineer target=_blank>Exam Overview</a>
-</li>
-<li><a href=https://cloud.google.com/certification/guides/cloud-engineer target=_blank>Official Exam Guide</a>
-</li>
-<li><a href=https://cloud.google.com/training target=_blank>Google Cloud Training</a>
-</li>
-</ul>
-<h3 id=online-courses--mock-exams>Online Courses & Mock Exams</h3>
-<table>
-<thead>
-<tr>
-<th style=text-align:center>Name</th>
-<th style=text-align:center>Platform</th>
-<th style=text-align:center>Price</th>
-<th style=text-align:center>Course</th>
-<th style=text-align:center>Mock Exam</th>
-<th style=text-align:center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:center><a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Cloud Engineering with Google Cloud Professional Certificate</a>
-</td>
-<td style=text-align:center>Coursera</td>
-<td style=text-align:center>$50/month</td>
-<td style=text-align:center>Y</td>
-<td style=text-align:center>N</td>
-<td style=text-align:center>Recommended (but it doesn&rsquo;t cover GKE much)</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://linuxacademy.com/course/google-cloud-certified-associate-cloud-engineer/ target=_blank>Google Cloud Certified Associate Cloud Engineer</a>
-</td>
-<td style=text-align:center>LinuxAcademy</td>
-<td style=text-align:center>$50</td>
-<td style=text-align:center>Y</td>
-<td style=text-align:center>Y (50Q)</td>
-<td style=text-align:center>Recommended by many Reddit users</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/ target=_blank>Ultimate Google Certified Associate Cloud Engineer 2020</a>
-</td>
-<td style=text-align:center>GCP @Udemy</td>
-<td style=text-align:center>~$60</td>
-<td style=text-align:center>Y</td>
-<td style=text-align:center>Y (70Q)</td>
-<td style=text-align:center>Mostly on sale (&lt;$15)</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://www.udemy.com/course/google-certified-associate-cloud-engineer/ target=_blank>Google Certified Associate Cloud Engineer Certification</a>
-</td>
-<td style=text-align:center>A Cloud Guru @Udemy</td>
-<td style=text-align:center>~$230</td>
-<td style=text-align:center>Y</td>
-<td style=text-align:center>Y (100Q)</td>
-<td style=text-align:center>Mostly on sale (&lt;$20)</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://cloud.google.com/certification/practice-exam/cloud-engineer target=_blank>Official Practice Exam</a>
-</td>
-<td style=text-align:center>Google Forms</td>
-<td style=text-align:center>free</td>
-<td style=text-align:center>N</td>
-<td style=text-align:center>Y (25Q)</td>
-<td style=text-align:center>Too easy but make sure you run through this</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/ target=_blank>Google Cloud Certified Associate Cloud Engineer</a>
-</td>
-<td style=text-align:center>Whizlabs</td>
-<td style=text-align:center>$9.95 (course) /$19.95 (exam)</td>
-<td style=text-align:center>Y</td>
-<td style=text-align:center>Y (160Q)</td>
-<td style=text-align:center>It&rsquo;s mock exam is a bit harder than actual exam</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://www.braincert.com/course/16818-Google-Cloud-Certified-Associate-Cloud-Engineer-Practice-Exams target=_blank>Google Cloud Certified - Associate Cloud Engineer Practice Exams</a>
-</td>
-<td style=text-align:center>BrainCert</td>
-<td style=text-align:center>$30</td>
-<td style=text-align:center>N</td>
-<td style=text-align:center>Y (250Q)</td>
-<td style=text-align:center>Didn&rsquo;t buy it so difficulty unknown</td>
-</tr>
-<tr>
-<td style=text-align:center><a href=https://google.qwiklabs.com/ target=_blank>Hand-on Labs@Qwiklabs</a>
-</td>
-<td style=text-align:center>Qwiklabs</td>
-<td style=text-align:center>Charge by credit</td>
-<td style=text-align:center>N</td>
-<td style=text-align:center>N</td>
-<td style=text-align:center>For hand-on labs. <a href=https://medium.com/@sathishvj/qwiklabs-free-codes-gcp-and-aws-e40f3855ffdb target=_blank>Free credits</a>
-are available from time to time</td>
-</tr>
-</tbody>
-</table>
-<h3 id=study-materials>Study Materials</h3>
-<h4 id=well-known-experts>Well-known Experts</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:center>Name</th>
-<th style=text-align:center>Repo</th>
-<th style=text-align:center>Medium</th>
-<th style=text-align:center>YouTube</th>
-<th style=text-align:center>Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:center>sathishvj</td>
-<td style=text-align:center><a href=https://github.com/sathishvj/awesome-gcp-certifications/blob/master/associate-cloud-engineer.md target=_blank>awesome-gcp-certifications</a>
-</td>
-<td style=text-align:center><a href=https://medium.com/@sathishvj target=_blank>sathish vj</a>
-</td>
-<td style=text-align:center><a href="https://www.youtube.com/playlist?list=PLQMsfKRZZviRwqJwNmh1eAWnRMvlrk40x" target=_blank>AwesomeGCP</a>
-</td>
-<td style=text-align:center>-</td>
-</tr>
-<tr>
-<td style=text-align:center>Joseph Holbrook (The Cloud Tech Guy)</td>
-<td style=text-align:center>-</td>
-<td style=text-align:center><a href=https://medium.com/@jholbrook2015 target=_blank>Joseph Holbrook</a>
-</td>
-<td style=text-align:center><a href=https://www.youtube.com/channel/UCLcRBsiL_BIgDdn7P6uZbnQ target=_blank>The Cloud Tech Guy Joe</a>
-</td>
-<td style=text-align:center><a href=https://www.udemy.com/user/joseph-holbrook/ target=_blank>Udemy</a>
-</td>
-</tr>
-</tbody>
-</table>
-<h4 id=other>Other</h4>
-<ul>
-<li><a href=https://github.com/ddneves/awesome-gcp-certifications#Google-Cloud---Associate-Cloud-Engineer target=_blank>ddneves/awesome-gcp-certifications (outdated)</a>
-</li>
-<li><a href=https://www.whizlabs.com/blog/gcp-cheat-sheet/ target=_blank>Whizlabs' ACE cheatsheet</a>
-</li>
-<li><a href=https://github.com/Viniciuscoding/granja_Google_Associate_Cloud_Engineer target=_blank>Viniciuscoding/granja_Google_Associate_Cloud_Engineer</a>
-</li>
-<li><a href=https://github.com/WebLeash/gcp_associate_engineer/blob/master/gcloud_cheat_sheet.md target=_blank>WebLeash/gcp_associate_engineer</a>
-</li>
-<li><a href=https://github.com/TiagoGouvea/google-cloud-associate-cloud-engineer-preparation target=_blank>TiagoGouvea/google-cloud-associate-cloud-engineer-preparation</a>
-</li>
-<li><a href=https://github.com/DRpandaMD/gcp-certified-associate-cloud-engineer-2020 target=_blank>DRpandaMD/gcp-certified-associate-cloud-engineer-2020</a>
-</li>
-<li><a href=https://medium.com/@shekharsarker84/notes-from-my-google-cloud-certification-exam-9ac056105121 target=_blank>Shekhar Sarker: Notes from my Google Cloud Certification Exam</a>
-</li>
-<li><a href=https://medium.com/@charles_j/how-i-passed-the-google-cloud-associate-engineer-certification-63a0fd932057 target=_blank>Charles.J@medium</a>
-: <a href=https://docs.google.com/document/d/1u6pXBiGMYj7ZLBN21x6jap11rG6gWk7n210hNnUzrkI/edit target=_blank>ACE Study Note</a>
-</li>
-</ul>
-<hr>
-<ul class=pager>
-<li class=previous>
-<a href=/2020/06/15/gcp-ace-note/ data-toggle=tooltip data-placement=top title="Course Note: Cloud Engineering with GCP on Coursera">&larr;
-Previous Post</a>
-</li>
-<li class=next>
-<a href=/2020/09/11/html-css-101/ data-toggle=tooltip data-placement=top title="HTML/CSS 101">Next
-Post &rarr;</a>
-</li>
-</ul>
-<div id=fb-root></div>
-<script async defer crossorigin=anonymous src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=221193225126786&autoLogAppEvents=1" nonce=2LnlgHdl></script>
-<div class=fb-comments data-href=https://mattwang44.dev/2020/07/01/gcp-ace/ data-width=600 data-numposts=5></div>
-</div>
-<div class="col-lg-2 col-lg-offset-0
+Although it&rsquo;s slightly easier than the actual exam, I think it&rsquo;s well-designed and could be a helpful resource if I had more time on it.</p></li></ul><p>So, it costed me about $140 to get the ACE certification:</p><table><thead><tr><th style=text-align:left>Item</th><th style=text-align:left>Price</th><th style=text-align:left>Note</th></tr></thead><tbody><tr><td style=text-align:left>Exam registration</td><td style=text-align:left>$70</td><td style=text-align:left>Normally it&rsquo;s $125 but somehow it&rsquo;s cheaper in Taiwan</td></tr><tr><td style=text-align:left><a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Coursera: Cloud Engineering with GCP</a></td><td style=text-align:left>$49</td><td style=text-align:left>Note that GCP releases free one-month-pass a couple times in a year</td></tr><tr><td style=text-align:left><a href=https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/ target=_blank>Whizlabs: Mock Exams</a></td><td style=text-align:left>$10</td><td style=text-align:left>$19.95 on the price tag but currently 50% off due to COVID-19</td></tr><tr><td style=text-align:left><a href=https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/ target=_blank>Udemy: Ultimate ACE 2020</a></td><td style=text-align:left>$10</td><td style=text-align:left>I bought it long ago when it&rsquo;s on sale</td></tr></tbody></table><h2 id=useful-materials>Useful Materials</h2><h3 id=about-ace-certification>About ACE Certification</h3><ul><li><a href=https://cloud.google.com/certification/cloud-engineer target=_blank>Exam Overview</a></li><li><a href=https://cloud.google.com/certification/guides/cloud-engineer target=_blank>Official Exam Guide</a></li><li><a href=https://cloud.google.com/training target=_blank>Google Cloud Training</a></li></ul><h3 id=online-courses--mock-exams>Online Courses & Mock Exams</h3><table><thead><tr><th style=text-align:center>Name</th><th style=text-align:center>Platform</th><th style=text-align:center>Price</th><th style=text-align:center>Course</th><th style=text-align:center>Mock Exam</th><th style=text-align:center></th></tr></thead><tbody><tr><td style=text-align:center><a href=https://www.coursera.org/professional-certificates/cloud-engineering-gcp target=_blank>Cloud Engineering with Google Cloud Professional Certificate</a></td><td style=text-align:center>Coursera</td><td style=text-align:center>$50/month</td><td style=text-align:center>Y</td><td style=text-align:center>N</td><td style=text-align:center>Recommended (but it doesn&rsquo;t cover GKE much)</td></tr><tr><td style=text-align:center><a href=https://linuxacademy.com/course/google-cloud-certified-associate-cloud-engineer/ target=_blank>Google Cloud Certified Associate Cloud Engineer</a></td><td style=text-align:center>LinuxAcademy</td><td style=text-align:center>$50</td><td style=text-align:center>Y</td><td style=text-align:center>Y (50Q)</td><td style=text-align:center>Recommended by many Reddit users</td></tr><tr><td style=text-align:center><a href=https://www.udemy.com/course/google-cloud-associate-cloud-engineer-certification/ target=_blank>Ultimate Google Certified Associate Cloud Engineer 2020</a></td><td style=text-align:center>GCP @Udemy</td><td style=text-align:center>~$60</td><td style=text-align:center>Y</td><td style=text-align:center>Y (70Q)</td><td style=text-align:center>Mostly on sale (&lt;$15)</td></tr><tr><td style=text-align:center><a href=https://www.udemy.com/course/google-certified-associate-cloud-engineer/ target=_blank>Google Certified Associate Cloud Engineer Certification</a></td><td style=text-align:center>A Cloud Guru @Udemy</td><td style=text-align:center>~$230</td><td style=text-align:center>Y</td><td style=text-align:center>Y (100Q)</td><td style=text-align:center>Mostly on sale (&lt;$20)</td></tr><tr><td style=text-align:center><a href=https://cloud.google.com/certification/practice-exam/cloud-engineer target=_blank>Official Practice Exam</a></td><td style=text-align:center>Google Forms</td><td style=text-align:center>free</td><td style=text-align:center>N</td><td style=text-align:center>Y (25Q)</td><td style=text-align:center>Too easy but make sure you run through this</td></tr><tr><td style=text-align:center><a href=https://www.whizlabs.com/google-cloud-certified-associate-cloud-engineer/ target=_blank>Google Cloud Certified Associate Cloud Engineer</a></td><td style=text-align:center>Whizlabs</td><td style=text-align:center>$9.95 (course) /$19.95 (exam)</td><td style=text-align:center>Y</td><td style=text-align:center>Y (160Q)</td><td style=text-align:center>It&rsquo;s mock exam is a bit harder than actual exam</td></tr><tr><td style=text-align:center><a href=https://www.braincert.com/course/16818-Google-Cloud-Certified-Associate-Cloud-Engineer-Practice-Exams target=_blank>Google Cloud Certified - Associate Cloud Engineer Practice Exams</a></td><td style=text-align:center>BrainCert</td><td style=text-align:center>$30</td><td style=text-align:center>N</td><td style=text-align:center>Y (250Q)</td><td style=text-align:center>Didn&rsquo;t buy it so difficulty unknown</td></tr><tr><td style=text-align:center><a href=https://google.qwiklabs.com/ target=_blank>Hand-on Labs@Qwiklabs</a></td><td style=text-align:center>Qwiklabs</td><td style=text-align:center>Charge by credit</td><td style=text-align:center>N</td><td style=text-align:center>N</td><td style=text-align:center>For hand-on labs. <a href=https://medium.com/@sathishvj/qwiklabs-free-codes-gcp-and-aws-e40f3855ffdb target=_blank>Free credits</a>
+are available from time to time</td></tr></tbody></table><h3 id=study-materials>Study Materials</h3><h4 id=well-known-experts>Well-known Experts</h4><table><thead><tr><th style=text-align:center>Name</th><th style=text-align:center>Repo</th><th style=text-align:center>Medium</th><th style=text-align:center>YouTube</th><th style=text-align:center>Course</th></tr></thead><tbody><tr><td style=text-align:center>sathishvj</td><td style=text-align:center><a href=https://github.com/sathishvj/awesome-gcp-certifications/blob/master/associate-cloud-engineer.md target=_blank>awesome-gcp-certifications</a></td><td style=text-align:center><a href=https://medium.com/@sathishvj target=_blank>sathish vj</a></td><td style=text-align:center><a href="https://www.youtube.com/playlist?list=PLQMsfKRZZviRwqJwNmh1eAWnRMvlrk40x" target=_blank>AwesomeGCP</a></td><td style=text-align:center>-</td></tr><tr><td style=text-align:center>Joseph Holbrook (The Cloud Tech Guy)</td><td style=text-align:center>-</td><td style=text-align:center><a href=https://medium.com/@jholbrook2015 target=_blank>Joseph Holbrook</a></td><td style=text-align:center><a href=https://www.youtube.com/channel/UCLcRBsiL_BIgDdn7P6uZbnQ target=_blank>The Cloud Tech Guy Joe</a></td><td style=text-align:center><a href=https://www.udemy.com/user/joseph-holbrook/ target=_blank>Udemy</a></td></tr></tbody></table><h4 id=other>Other</h4><ul><li><a href=https://github.com/ddneves/awesome-gcp-certifications#Google-Cloud---Associate-Cloud-Engineer target=_blank>ddneves/awesome-gcp-certifications (outdated)</a></li><li><a href=https://www.whizlabs.com/blog/gcp-cheat-sheet/ target=_blank>Whizlabs&amp;rsquo; ACE cheatsheet</a></li><li><a href=https://github.com/Viniciuscoding/granja_Google_Associate_Cloud_Engineer target=_blank>Viniciuscoding/granja_Google_Associate_Cloud_Engineer</a></li><li><a href=https://github.com/WebLeash/gcp_associate_engineer/blob/master/gcloud_cheat_sheet.md target=_blank>WebLeash/gcp_associate_engineer</a></li><li><a href=https://github.com/TiagoGouvea/google-cloud-associate-cloud-engineer-preparation target=_blank>TiagoGouvea/google-cloud-associate-cloud-engineer-preparation</a></li><li><a href=https://github.com/DRpandaMD/gcp-certified-associate-cloud-engineer-2020 target=_blank>DRpandaMD/gcp-certified-associate-cloud-engineer-2020</a></li><li><a href=https://medium.com/@shekharsarker84/notes-from-my-google-cloud-certification-exam-9ac056105121 target=_blank>Shekhar Sarker: Notes from my Google Cloud Certification Exam</a></li><li><a href=https://medium.com/@charles_j/how-i-passed-the-google-cloud-associate-engineer-certification-63a0fd932057 target=_blank>Charles.J@medium</a>
+: <a href=https://docs.google.com/document/d/1u6pXBiGMYj7ZLBN21x6jap11rG6gWk7n210hNnUzrkI/edit target=_blank>ACE Study Note</a></li></ul><hr><ul class=pager><li class=previous><a href=/2020/06/15/gcp-ace-note/ data-toggle=tooltip data-placement=top title="Course Note: Cloud Engineering with GCP on Coursera">&larr;
+Previous Post</a></li><li class=next><a href=/2020/09/11/html-css-101/ data-toggle=tooltip data-placement=top title="HTML/CSS 101">Next
+Post &rarr;</a></li></ul><div id=fb-root></div><script async defer crossorigin=anonymous src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=221193225126786&autoLogAppEvents=1" nonce=2LnlgHdl></script><div class=fb-comments data-href=https://mattwang44.dev/2020/07/01/gcp-ace/ data-width=600 data-numposts=5></div></div><div class="col-lg-2 col-lg-offset-0
 visible-lg-block
 sidebar-container
-catalog-container">
-<div class=side-catalog>
-<hr class="hidden-sm hidden-xs">
-<h5>
-<a class=catalog-toggle href=#>CATALOG</a>
-</h5>
-<ul class=catalog-body></ul>
-</div>
-</div>
-<div class="col-lg-11 col-lg-offset-1
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
-sidebar-container">
-<section>
-<hr class="hidden-sm hidden-xs">
-<h5><a href=/tags/>FEATURED TAGS</a></h5>
-<div class=tags>
-<a href=/tags/conference title=conference>
-conference
-</a>
-<a href=/tags/course title=course>
-course
-</a>
-<a href=/tags/css title=css>
-css
-</a>
-<a href=/tags/cv title=cv>
-cv
-</a>
-<a href=/tags/devops title=devops>
-devops
-</a>
-<a href=/tags/gcp title=gcp>
-gcp
-</a>
-<a href=/tags/gnn title=gnn>
-gnn
-</a>
-<a href=/tags/html title=html>
-html
-</a>
-<a href=/tags/iac title=iac>
-iac
-</a>
-<a href=/tags/matlab title=matlab>
-matlab
-</a>
-<a href=/tags/misc title=misc>
-misc
-</a>
-<a href=/tags/pycontw title=pycontw>
-pycontw
-</a>
-<a href=/tags/python title=python>
-python
-</a>
-<a href=/tags/slides title=slides>
-slides
-</a>
-<a href=/tags/terraform title=terraform>
-terraform
-</a>
-</div>
-</section>
-</div>
-</div>
-</div>
-</article>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center">
-<li>
-<a href rel=alternate type=application/rss+xml title="Matt Wang's Note">
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=mailto:mattwang44@gmail.com>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/mattwang44>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071">
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://github.com/mattwang44>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-github fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://medium.com/@mattwang44>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-medium fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-</ul>
-<p class="copyright text-muted">
-Copyright &copy; Matt Wang's Note 2022
-<br>
-<a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
-<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe>
-</p>
-</div>
-</div>
-</div>
-</footer>
-<script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
-<script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
-<script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-210096427-1','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-<script type=text/javascript>function generateCatalog(a){_containerSelector='div.post-container';var h=$(_containerSelector),c,d,e,f,g,b;return c=h.find('h1,h2,h3,h4,h5,h6'),$(a).html(''),c.each(function(){d=$(this).prop('tagName').toLowerCase(),g="#"+$(this).prop('id'),e=$(this).text(),b=$('<a href="'+g+'" rel="nofollow">'+e+'</a>'),f=$('<li class="'+d+'_nav"></li>').append(b),$(a).append(f)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(a){a.preventDefault(),$('.side-catalog').toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$('.catalog-body').onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script>
-</body>
-</html>
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/tags/career title=career>career</a>
+<a href=/tags/conference title=conference>conference</a>
+<a href=/tags/course title=course>course</a>
+<a href=/tags/css title=css>css</a>
+<a href=/tags/cv title=cv>cv</a>
+<a href=/tags/devops title=devops>devops</a>
+<a href=/tags/gcp title=gcp>gcp</a>
+<a href=/tags/gnn title=gnn>gnn</a>
+<a href=/tags/html title=html>html</a>
+<a href=/tags/iac title=iac>iac</a>
+<a href=/tags/interview title=interview>interview</a>
+<a href=/tags/matlab title=matlab>matlab</a>
+<a href=/tags/misc title=misc>misc</a>
+<a href=/tags/pycontw title=pycontw>pycontw</a>
+<a href=/tags/python title=python>python</a>
+<a href=/tags/slides title=slides>slides</a>
+<a href=/tags/terraform title=terraform>terraform</a></div></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href rel=alternate type=application/rss+xml title="Matt Wang's Note"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li><li><a href=mailto:mattwang44@gmail.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/mattwang44><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/mattwang44><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://medium.com/@mattwang44><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-medium fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Matt Wang's Note 2022<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(i,t){var n=document,s="script",e=n.createElement(s),o=n.getElementsByTagName(s)[0];e.src=i,t&&e.addEventListener("load",function(e){t(null,e)},!1),o.parentNode.insertBefore(e,o)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-210096427-1","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var r=$(_containerSelector),s,o,i,a,t,n=r.find("h1,h2,h3,h4,h5,h6");return $(e).html(''),n.each(function(){s=$(this).prop("tagName").toLowerCase(),a="#"+$(this).prop("id"),o=$(this).text(),t=$('<a href="'+a+'" rel="nofollow">'+o+"</a>"),i=$('<li class="'+s+'_nav"></li>').append(t),$(e).append(i)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>

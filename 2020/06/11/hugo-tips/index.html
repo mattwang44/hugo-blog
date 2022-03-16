@@ -1,301 +1,59 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta property="og:site_name" content="Matt Wang's Note">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
-<meta property="twitter:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80">
-<meta name=title content="Hugo Tips">
-<meta property="og:title" content="Hugo Tips">
-<meta property="twitter:title" content="Hugo Tips">
-<meta name=description content=" ">
-<meta property="og:description" content=" ">
-<meta property="twitter:description" content=" ">
-<meta property="twitter:card" content="summary">
-<meta name=keyword content="Matt Wang, Wei-Hsiang Wang, blog, Taiwan">
-<link rel="shortcut icon" href=/img/favicon.ico>
-<title>Hugo Tips-Matt Wang's Note</title>
-<link rel=canonical href=/2020/06/11/hugo-tips/>
-<link rel=stylesheet href=/css/iDisqus.min.css>
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css>
-<link rel=stylesheet href=/css/zanshang.css>
-<link href=//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css rel=stylesheet type=text/css>
-<script src=/js/jquery.min.js></script>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Matt Wang's Note"><meta property="og:type" content="article"><meta property="og:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80"><meta property="twitter:image" content="https://mattwang44.dev//https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2726&q=80"><meta name=title content="Hugo Tips"><meta property="og:title" content="Hugo Tips"><meta property="twitter:title" content="Hugo Tips"><meta name=description content=" "><meta property="og:description" content=" "><meta property="twitter:description" content=" "><meta property="twitter:card" content="summary"><meta name=keyword content="Matt Wang, Wei-Hsiang Wang, blog, Taiwan"><link rel="shortcut icon" href=/img/favicon.ico><title>Hugo Tips-Matt Wang's Note</title><link rel=canonical href=/2020/06/11/hugo-tips/><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
-<script src=/js/hux-blog.min.js></script>
-</head>
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-<div class=container-fluid>
-<div class="navbar-header page-scroll">
-<button type=button class=navbar-toggle>
+<script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
-<span class=icon-bar></span>
-</button>
-<a class=navbar-brand href=/>Matt Wang's Note</a>
-</div>
-<div id=huxblog_navbar>
-<div class=navbar-collapse>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a href=/>Home</a>
-</li>
-<li>
-<a href=/categories/tech>tech</a>
-</li>
-<li><a href=/top/archive/>ARCHIVE</a></li>
-<li><a href=/top/about/>ABOUT</a></li>
-</ul>
-</div>
-</div>
-</div>
-</nav>
-<script>var $body=document.body,$toggle=document.querySelector('.navbar-toggle'),$navbar=document.querySelector('#huxblog_navbar'),$collapse=document.querySelector('.navbar-collapse');$toggle.addEventListener('click',handleMagic);function handleMagic(a){$navbar.className.indexOf('in')>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf('in')<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script>
-<style type=text/css>header.intro-header{background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(https://s3.wp.wsu.edu/uploads/sites/1417/2017/04/ms_plant_health_banner_990.jpg)}</style>
-<header class=intro-header>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<div class=tags>
-<a class=tag href=/tags/misc title=misc>
-misc
-</a>
-</div>
-<h1>Hugo Tips</h1>
-<h2 class=subheading></h2>
-<span class=meta>
-Posted by
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Matt Wang's Note</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>Home</a></li><li><a href=/categories/tech>tech</a></li><li><a href=/top/archive/>ARCHIVE</a></li><li><a href=/top/about/>ABOUT</a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(https://s3.wp.wsu.edu/uploads/sites/1417/2017/04/ms_plant_health_banner_990.jpg)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/misc title=misc>misc</a></div><h1>Hugo Tips</h1><h2 class=subheading></h2><span class=meta>Posted by
 Matt Wang
 on
-Thursday, June 11, 2020
-</span>
-</div>
-</div>
-</div>
-</div>
-</header>
-<article>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2
+Thursday, June 11, 2020</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
-post-container">
-<div class=fb-like data-href=https://mattwang44.dev/2020/06/11/hugo-tips/ data-width data-layout=standard data-action=like data-size=small data-share=true></div>
-<h2 id=shortcode-collection>Shortcode Collection</h2>
-<ul>
-<li><a href=https://gohugo.io/content-management/shortcodes/ target=_blank>Hugo native shortcodes</a>
-</li>
-<li><a href=https://ashish.one/gist/add-responsive-google-slides-on-hugo/ target=_blank>Embed Google Presentation</a>
-</li>
-<li><a href=https://github.com/liwenyip/hugo-easy-gallery/ target=_blank>&lt;code>figure&lt;/code> &amp;amp; &lt;code>gallery&lt;/code></a>
-</li>
-<li><a href=https://anaulin.org/blog/hugo-raw-html-shortcode/ target=_blank>Insert HTML in Markdown</a>
-</li>
-<li><a href=https://www.starfallprojects.co.uk/posts/hugo-tooltip-shortcode/ target=_blank>Tooltips</a>
-</li>
-</ul>
-<h2 id=enable-mathjax>Enable MathJax</h2>
-<p>Add following lines into <code>theme/&lt;theme>/layout/partials/math.html</code></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>script</span>
-  <span style=color:#50fa7b>src</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span>
-  <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;text/javascript&#34;</span>
-&gt;&lt;/<span style=color:#ff79c6>script</span>&gt;
-
-&lt;<span style=color:#ff79c6>script</span> <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;text/x-mathjax-config&#34;</span>&gt;
-  MathJax.Hub.Config({ tex2jax<span style=color:#ff79c6>:</span> {inlineMath<span style=color:#ff79c6>:</span> [[<span style=color:#f1fa8c>&#39;$&#39;</span>,<span style=color:#f1fa8c>&#39;$&#39;</span>]]}  });
-&lt;/<span style=color:#ff79c6>script</span>&gt;
-</code></pre></div><p>and put following lines in any template that the target page used:</p>
-<pre tabindex=0><code>{{ if or .Params.math .Site.Params.math }}
-{{ partial &quot;math.html&quot; . }}
+post-container"><div class=fb-like data-href=https://mattwang44.dev/2020/06/11/hugo-tips/ data-width data-layout=standard data-action=like data-size=small data-share=true></div><h2 id=shortcode-collection>Shortcode Collection</h2><ul><li><a href=https://gohugo.io/content-management/shortcodes/ target=_blank>Hugo native shortcodes</a></li><li><a href=https://ashish.one/gist/add-responsive-google-slides-on-hugo/ target=_blank>Embed Google Presentation</a></li><li><a href=https://github.com/liwenyip/hugo-easy-gallery/ target=_blank>&lt;code>figure&lt;/code> &amp;amp; &lt;code>gallery&lt;/code></a></li><li><a href=https://anaulin.org/blog/hugo-raw-html-shortcode/ target=_blank>Insert HTML in Markdown</a></li><li><a href=https://www.starfallprojects.co.uk/posts/hugo-tooltip-shortcode/ target=_blank>Tooltips</a></li></ul><h2 id=enable-mathjax>Enable MathJax</h2><p>Add following lines into <code>theme/&lt;theme>/layout/partials/math.html</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>script</span>
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>src</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;text/javascript&#34;</span>
+</span></span><span style=display:flex><span>&gt;&lt;/<span style=color:#ff79c6>script</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#ff79c6>script</span> <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;text/x-mathjax-config&#34;</span>&gt;
+</span></span><span style=display:flex><span>  MathJax.Hub.Config({ tex2jax<span style=color:#ff79c6>:</span> {inlineMath<span style=color:#ff79c6>:</span> [[<span style=color:#f1fa8c>&#39;$&#39;</span>,<span style=color:#f1fa8c>&#39;$&#39;</span>]]}  });
+</span></span><span style=display:flex><span>&lt;/<span style=color:#ff79c6>script</span>&gt;
+</span></span></code></pre></div><p>and put following lines in any template that the target page used:</p><pre tabindex=0><code>{{ if or .Params.math .Site.Params.math }}
+{{ partial &#34;math.html&#34; . }}
 {{ end }}
-</code></pre><p>and then put the parameter <code>math: true</code> in the header of the article page to enable MathJax.</p>
-<h2 id=simple-seo>Simple SEO</h2>
-<ul>
-<li><a href=https://gohugo.io/templates/sitemap-template/#configure-sitemapxml target=_blank>configure sitemap</a>
+</code></pre><p>and then put the parameter <code>math: true</code> in the header of the article page to enable MathJax.</p><h2 id=simple-seo>Simple SEO</h2><ul><li><a href=https://gohugo.io/templates/sitemap-template/#configure-sitemapxml target=_blank>configure sitemap</a>
 and provide the URL of sitemap (e.g. <code>&lt;host>/sitemap/</code>) to <a href=https://search.google.com/search-console target=_blank>Google Search Console</a>
-.</li>
-<li>Already done by the theme I used:
-<ul>
-<li>Integrate with Google Analytics.</li>
-<li>Configure Open Graph tags.</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul class=pager>
-<li class=previous>
-<a href=/2020/01/19/single-shot-multibox-detector/ data-toggle=tooltip data-placement=top title="[Paper] Relational inductive biases, deep learning, and graph networks">&larr;
-Previous Post</a>
-</li>
-<li class=next>
-<a href=/2020/06/15/gcp-ace-note/ data-toggle=tooltip data-placement=top title="Course Note: Cloud Engineering with GCP on Coursera">Next
-Post &rarr;</a>
-</li>
-</ul>
-<div id=fb-root></div>
-<script async defer crossorigin=anonymous src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=221193225126786&autoLogAppEvents=1" nonce=2LnlgHdl></script>
-<div class=fb-comments data-href=https://mattwang44.dev/2020/06/11/hugo-tips/ data-width=600 data-numposts=5></div>
-</div>
-<div class="col-lg-2 col-lg-offset-0
+.</li><li>Already done by the theme I used:<ul><li>Integrate with Google Analytics.</li><li>Configure Open Graph tags.</li></ul></li></ul><hr><ul class=pager><li class=previous><a href=/2020/01/19/single-shot-multibox-detector/ data-toggle=tooltip data-placement=top title="[Paper] Relational inductive biases, deep learning, and graph networks">&larr;
+Previous Post</a></li><li class=next><a href=/2020/06/15/gcp-ace-note/ data-toggle=tooltip data-placement=top title="Course Note: Cloud Engineering with GCP on Coursera">Next
+Post &rarr;</a></li></ul><div id=fb-root></div><script async defer crossorigin=anonymous src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=221193225126786&autoLogAppEvents=1" nonce=2LnlgHdl></script><div class=fb-comments data-href=https://mattwang44.dev/2020/06/11/hugo-tips/ data-width=600 data-numposts=5></div></div><div class="col-lg-2 col-lg-offset-0
 visible-lg-block
 sidebar-container
-catalog-container">
-<div class=side-catalog>
-<hr class="hidden-sm hidden-xs">
-<h5>
-<a class=catalog-toggle href=#>CATALOG</a>
-</h5>
-<ul class=catalog-body></ul>
-</div>
-</div>
-<div class="col-lg-11 col-lg-offset-1
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
-sidebar-container">
-<section>
-<hr class="hidden-sm hidden-xs">
-<h5><a href=/tags/>FEATURED TAGS</a></h5>
-<div class=tags>
-<a href=/tags/conference title=conference>
-conference
-</a>
-<a href=/tags/course title=course>
-course
-</a>
-<a href=/tags/css title=css>
-css
-</a>
-<a href=/tags/cv title=cv>
-cv
-</a>
-<a href=/tags/devops title=devops>
-devops
-</a>
-<a href=/tags/gcp title=gcp>
-gcp
-</a>
-<a href=/tags/gnn title=gnn>
-gnn
-</a>
-<a href=/tags/html title=html>
-html
-</a>
-<a href=/tags/iac title=iac>
-iac
-</a>
-<a href=/tags/matlab title=matlab>
-matlab
-</a>
-<a href=/tags/misc title=misc>
-misc
-</a>
-<a href=/tags/pycontw title=pycontw>
-pycontw
-</a>
-<a href=/tags/python title=python>
-python
-</a>
-<a href=/tags/slides title=slides>
-slides
-</a>
-<a href=/tags/terraform title=terraform>
-terraform
-</a>
-</div>
-</section>
-</div>
-</div>
-</div>
-</article>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center">
-<li>
-<a href rel=alternate type=application/rss+xml title="Matt Wang's Note">
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=mailto:mattwang44@gmail.com>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/mattwang44>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071">
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://github.com/mattwang44>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-github fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://medium.com/@mattwang44>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-medium fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-</ul>
-<p class="copyright text-muted">
-Copyright &copy; Matt Wang's Note 2022
-<br>
-<a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
-<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe>
-</p>
-</div>
-</div>
-</div>
-</footer>
-<script>function loadAsync(f,b){var c=document,d='script',a=c.createElement(d),e=c.getElementsByTagName(d)[0];a.src=f,b&&a.addEventListener('load',function(a){b(null,a)},!1),e.parentNode.insertBefore(a,e)}</script>
-<script>$('#tag_cloud').length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:'#bbbbee',end:'#0085a1'}},$('#tag_cloud a').tagcloud()})</script>
-<script>loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js",function(){var a=document.querySelector("nav");a&&FastClick.attach(a)})</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-210096427-1','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-<script type=text/javascript>function generateCatalog(a){_containerSelector='div.post-container';var h=$(_containerSelector),c,d,e,f,g,b;return c=h.find('h1,h2,h3,h4,h5,h6'),$(a).html(''),c.each(function(){d=$(this).prop('tagName').toLowerCase(),g="#"+$(this).prop('id'),e=$(this).text(),b=$('<a href="'+g+'" rel="nofollow">'+e+'</a>'),f=$('<li class="'+d+'_nav"></li>').append(b),$(a).append(f)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(a){a.preventDefault(),$('.side-catalog').toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$('.catalog-body').onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script>
-</body>
-</html>
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/tags/career title=career>career</a>
+<a href=/tags/conference title=conference>conference</a>
+<a href=/tags/course title=course>course</a>
+<a href=/tags/css title=css>css</a>
+<a href=/tags/cv title=cv>cv</a>
+<a href=/tags/devops title=devops>devops</a>
+<a href=/tags/gcp title=gcp>gcp</a>
+<a href=/tags/gnn title=gnn>gnn</a>
+<a href=/tags/html title=html>html</a>
+<a href=/tags/iac title=iac>iac</a>
+<a href=/tags/interview title=interview>interview</a>
+<a href=/tags/matlab title=matlab>matlab</a>
+<a href=/tags/misc title=misc>misc</a>
+<a href=/tags/pycontw title=pycontw>pycontw</a>
+<a href=/tags/python title=python>python</a>
+<a href=/tags/slides title=slides>slides</a>
+<a href=/tags/terraform title=terraform>terraform</a></div></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href rel=alternate type=application/rss+xml title="Matt Wang's Note"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li><li><a href=mailto:mattwang44@gmail.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/mattwang44><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href="https://www.facebook.com/profile.php?id=100000194291071"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/mattwang44><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://www.linkedin.com/in/wei-hsiang-wang-60841b108/><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://medium.com/@mattwang44><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-medium fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://stackoverflow.com/users/7969188/matt-wang><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Matt Wang's Note 2022<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(i,t){var n=document,s="script",e=n.createElement(s),o=n.getElementsByTagName(s)[0];e.src=i,t&&e.addEventListener("load",function(e){t(null,e)},!1),o.parentNode.insertBefore(e,o)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-210096427-1","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var r=$(_containerSelector),s,o,i,a,t,n=r.find("h1,h2,h3,h4,h5,h6");return $(e).html(''),n.each(function(){s=$(this).prop("tagName").toLowerCase(),a="#"+$(this).prop("id"),o=$(this).text(),t=$('<a href="'+a+'" rel="nofollow">'+o+"</a>"),i=$('<li class="'+s+'_nav"></li>').append(t),$(e).append(i)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>
